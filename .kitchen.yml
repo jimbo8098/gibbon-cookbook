@@ -1,0 +1,23 @@
+---
+
+driver:
+  name: docker
+  use_sudo: true
+
+provisioner:
+  name: chef_solo
+  environment_path: environments
+
+platforms:
+  - name: centos-7
+    image: centos/systemd
+    run_command: /usr/sbin/initd
+    privileged: true
+
+suites:
+  - name: cent7
+    provisioner:
+      solo_rb:
+        environment: default
+    run_list:
+      - recipe['install']

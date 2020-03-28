@@ -1,0 +1,19 @@
+{
+	"json_class": "Chef::Environments",
+	"description": "A default environment for testing purposes",
+	"cookbook_versions": "",
+	"chef_type": "environment",
+	"default_attributes": {
+		"gibbon": {
+			"version": "v19.0.00",
+			"database_host": "localhost",
+			"username": "gibbon",
+			"password": "password",
+			"database_name": "gibbon",
+		},
+		"php": {
+			"install_method": "
+			"version": "7.4"
+		}
+	}
+}

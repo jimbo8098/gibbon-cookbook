@@ -1,0 +1,13 @@
+DEPENDENCIES
+  apache2 (~> 8.1.0)
+  mysql (~> 8.6.0)
+  php (~> 7.0.0)
+  yum-mysql-community
+
+GRAPH
+  apache2 (8.1.0)
+  mysql (8.6.0)
+  php (7.0.0)
+    yum-epel (>= 0.0.0)
+  yum-epel (3.3.0)
+  yum-mysql-community (4.1.0)
