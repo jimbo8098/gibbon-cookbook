@@ -1,0 +1,11 @@
+{
+  "name": "gibbon",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "description": "Gibbon server role",
+  "default_attriutes": {
+  },
+  "run_list": [
+    "recipe[apache2_helper]"
+  ]
+}

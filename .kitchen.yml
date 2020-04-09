@@ -1,8 +1,6 @@
 ---
-
 driver:
-  name: docker
-  use_sudo: true
+  name: vagrant
 
 provisioner:
   name: chef_solo
@@ -10,14 +8,13 @@ provisioner:
 
 platforms:
   - name: centos-7
-    image: centos/systemd
-    run_command: /usr/sbin/initd
-    privileged: true
+    driver:
+      box: centos/7
 
 suites:
-  - name: cent7
+  - name: default
     provisioner:
       solo_rb:
         environment: default
     run_list:
-      - recipe['install']
+      - role[gibbon]
