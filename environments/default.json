@@ -12,6 +12,11 @@
     },
     "php": {
       "version": "7.4"
+    },
+    "apache":{
+      "modules": [
+        "rewrite"
+      ]
     }
   },
   "run_list": [
