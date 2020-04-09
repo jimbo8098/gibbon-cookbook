@@ -7,10 +7,9 @@ service 'apache2' do
   action [:start, :enable]
 end
 
-apache2_module 'deflate'
-apache2_module 'headers'
+apache2_module 'mod_rewrite'
 
-app_dir = '/var/www/basic_site'
+app_dir = '/var/www/gibbon'
 
 directory app_dir do
   recursive true
@@ -22,21 +21,21 @@ file "#{app_dir}/index.html" do
   owner   lazy { default_apache_user }
   group   lazy { default_apache_group }
 end
-
-template 'basic_site' do
-  extend  Apache2::Cookbook::Helpers
-  source 'basic_site.conf.erb'
-  path "#{apache_dir}/sites-available/basic_site.conf"
-  variables(
-    server_name: '127.0.0.1',
-    document_root: app_dir,
-    log_dir: lazy { default_log_dir },
-    site_name: 'basic_site'
-  )
-end
-
-apache2_site 'basic_site'
-
-apache2_site '000-default' do
-  action :disable
-end
+#
+#template 'basic_site' do
+#  extend  Apache2::Cookbook::Helpers
+#  source 'basic_site.conf.erb'
+#  path "#{apache_dir}/sites-available/basic_site.conf"
+#  variables(
+#    server_name: '127.0.0.1',
+#    document_root: app_dir,
+#    log_dir: lazy { default_log_dir },
+#    site_name: 'basic_site'
+#  )
+#end
+#
+#apache2_site 'basic_site'
+#
+#apache2_site '000-default' do
+#  action :disable
+#end

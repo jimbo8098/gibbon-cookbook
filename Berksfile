@@ -4,4 +4,3 @@ source "https://api.berkshelf.com"
 #cookbook 'yum-mysql-community'
 cookbook 'apache2', '~> 8.1.0'
 cookbook 'apache2_helper', path: 'helpers/apache2_helper'
-#cookbook 'apache2', path: 'local/apache2'
