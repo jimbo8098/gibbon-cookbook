@@ -6,6 +6,8 @@
   "default_attriutes": {
   },
   "run_list": [
-    "recipe[apache2_helper]"
+    "recipe[yum-epel]",
+    "recipe[apache2_helper]",
+    "recipe[php_helper]"
   ]
 }
