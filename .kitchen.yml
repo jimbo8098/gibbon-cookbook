@@ -18,3 +18,10 @@ suites:
         environment: default
     run_list:
       - role[gibbon]
+
+  - name: source
+    provisioner:
+      solo_rb:
+        environment: source
+    run_list:
+      - role[gibbon]

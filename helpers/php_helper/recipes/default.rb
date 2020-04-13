@@ -8,4 +8,6 @@ if node['php']['install_method'] == 'package' then
   else
     raise "Helper only support RHEL"
   end
+else
+  include_recipe 'php'
 end
