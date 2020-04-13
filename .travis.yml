@@ -8,10 +8,10 @@ before_install:
   - gem install bundler
 install:
   - bundle install
-  - bundle exec berks install
 env:
   - ENVIRONMENT_NAME=source
   - ENVINRONENT_NAME=default
+script: bundle exec berks install
 jobs:
   allow_failures:
     - if: ENVIRONMENT_NAME = source
