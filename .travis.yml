@@ -1,7 +1,20 @@
 language: ruby
 rvm:
   - 2.1
+branches:
+  only:
+    - master
+before_install:
+  - gem install bundler
 install:
+  - bundle install
   - bundle exec berks install
-script:
-  - bundle exec kitchen test
+env:
+  - ENVIRONMENT_NAME=source
+  - ENVINRONENT_NAME=default
+jobs:
+  allow_failures:
+    - if: ENVIRONMENT_NAME = source
+  include:
+    - stage: deploy
+      script: bundle exec kitchen test $ENVIRONMENT_NAME
