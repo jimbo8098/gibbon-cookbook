@@ -5,14 +5,23 @@
   "default_attributes": {
     "gibbon": {
       "version": "v19.0.00",
-      "database_host": "localhost",
-      "username": "gibbon",
-      "password": "password",
-      "database_name": "gibbon",
       "site_name": "gibbon.localhost",
       "gibbon_dir": "/var/www/gibbon",
       "port": "80",
-      "ip": "*"
+      "ip": "*",
+      "database": {
+        "host": "127.0.0.1",
+        "username": "gibbon_user",
+        "password": "password",
+        "name": "gibbon",
+        "port": 3306
+      }
+    },
+    "mariadb": {
+      "server_root_password": "",
+      "mysqld": {
+        "port": 3306
+      }
     },
     "php": {
       "install_method": "package",

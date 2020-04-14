@@ -11,7 +11,6 @@ node['apache']['modules'].each do |mod|
   apache2_module mod
 end
 
-puts node['gibbon'].inspect
 template node['gibbon']['site_name'] do
   extend  Apache2::Cookbook::Helpers
   source "site.conf.erb"
