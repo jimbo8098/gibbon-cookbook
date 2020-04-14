@@ -2,21 +2,31 @@ DEPENDENCIES
   apache2 (~> 8.1.0)
   apache2_helper
     path: helpers/apache2_helper
+  mariadb (~> 3.1.0)
+  mariadb_helper
+    path: helpers/mariadb_helper
   php (~> 7.0.0)
   php_helper
     path: helpers/php_helper
+  selinux
   yum-remi-chef (~> 4.0.0)
 
 GRAPH
-  apache2 (8.1.0)
+  apache2 (8.1.1)
   apache2_helper (1.0.0)
     apache2 (>= 0.0.0)
+  mariadb (3.1.0)
+    selinux_policy (~> 2.0)
+  mariadb_helper (1.0.0)
+    mariadb (>= 0.0.0)
   php (7.0.0)
     yum-epel (>= 0.0.0)
   php_helper (1.0.0)
     php (>= 0.0.0)
     yum-epel (>= 0.0.0)
     yum-remi-chef (>= 0.0.0)
+  selinux (3.0.1)
+  selinux_policy (2.4.0)
   yum-epel (3.3.0)
   yum-remi-chef (4.0.0)
     yum-epel (>= 0.0.0)
