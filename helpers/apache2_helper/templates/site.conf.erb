@@ -1,0 +1,5 @@
+<VirtualHost <%= @ip %>:<%= @port %>>
+  DocumentRoot "<%= @document_root %>"
+  ServerName <%= @site_name %>
+  ErrorLog <%= @log_dir %>/<%= @site_name %>.error
+</VirtualHost>

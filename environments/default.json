@@ -8,7 +8,11 @@
       "database_host": "localhost",
       "username": "gibbon",
       "password": "password",
-      "database_name": "gibbon"
+      "database_name": "gibbon",
+      "site_name": "gibbon.localhost",
+      "gibbon_dir": "/var/www/gibbon",
+      "port": "80",
+      "ip": "*"
     },
     "php": {
       "install_method": "package",
@@ -19,8 +23,5 @@
         "rewrite"
       ]
     }
-  },
-  "run_list": [
-    "recipe[apache_install]"
-  ]
+  }
 }
