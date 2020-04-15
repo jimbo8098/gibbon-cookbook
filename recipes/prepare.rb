@@ -67,4 +67,15 @@ mariadb_user 'gibbon-user' do
   database_name database['name']
 end
 
+firewall_rule 'http' do
+  port 80
+  protocol :tcp
+  command :allow
+end
+
+firewall_rule 'http/https' do
+  port [80, 443]
+  protocol :tcp
+  command :allow
+end
 
