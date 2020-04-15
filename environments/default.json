@@ -4,7 +4,6 @@
   "chef_type": "environment",
   "default_attributes": {
     "gibbon": {
-      "version": "v19.0.00",
       "site_name": "gibbon.localhost",
       "gibbon_dir": "/var/www/gibbon",
       "port": "80",

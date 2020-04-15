@@ -6,9 +6,6 @@
   "default_attriutes": {
   },
   "run_list": [
-    "recipe[yum-epel]",
-    "recipe[apache2_helper]",
-    "recipe[php_helper]",
-    "recipe[mariadb_helper]"
+    "recipe[gibbon::install]"
   ]
 }

@@ -1,1 +1,2 @@
-name= "Gibbon Cookbook"
+name "gibbon"
+version "1.0"

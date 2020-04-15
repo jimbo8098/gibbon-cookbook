@@ -2,6 +2,8 @@ DEPENDENCIES
   apache2 (~> 8.1.0)
   apache2_helper
     path: helpers/apache2_helper
+  gibbon
+    path: ../gibbon-test
   mariadb (~> 3.1.0)
   mariadb_helper
     path: helpers/mariadb_helper
@@ -15,6 +17,7 @@ GRAPH
   apache2 (8.1.1)
   apache2_helper (1.0.0)
     apache2 (>= 0.0.0)
+  gibbon (1.0.0)
   mariadb (3.1.0)
     selinux_policy (~> 2.0)
   mariadb_helper (1.0.0)
