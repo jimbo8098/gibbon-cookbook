@@ -1,2 +1,2 @@
-node['gibbon']['version'] = "19.0.00"
+node.default['gibbon']['version'] = "19.0.00"
 
